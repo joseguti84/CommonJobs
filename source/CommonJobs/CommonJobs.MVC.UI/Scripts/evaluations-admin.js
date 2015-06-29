@@ -14,7 +14,9 @@
         ];
         this.sort = commonSort.bind(this);
         this.defaultSort = function () {
-            this.sort(this.headers[0]);
+            var columnDefault = this.headers[0];
+            columnDefault.asc = true;
+            this.sort(columnDefault);
         }
     }
 

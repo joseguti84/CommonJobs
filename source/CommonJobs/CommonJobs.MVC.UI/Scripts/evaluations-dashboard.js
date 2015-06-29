@@ -140,7 +140,9 @@
         ];
         this.sort = commonSort.bind(this);
         this.defaultSort = function () {
-            this.sort(this.headers[1]);
+            var columnDefault = this.headers[1];
+            columnDefault.asc = true;
+            this.sort(columnDefault);
         }
     }
 
